@@ -1,0 +1,1 @@
+pip freeze > requirements.txt  --> to get requirements.txt file auto generate
