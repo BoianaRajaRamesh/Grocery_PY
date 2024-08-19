@@ -1,0 +1,103 @@
+{% load static %}
+<script>
+  var darkCssPath = "{% static 'css/dark.css' %}";
+  var defaultCssPath = "{% static 'css/style.css' %}";
+  var rtlCssPath = "{% static 'css/vendors/bootstrap.rtl.css' %}";
+  var defaultRtlCssPath = "{% static 'css/vendors/bootstrap.css' %}";
+</script>
+<!-- jquery 3.6.0 -->
+<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+
+<!-- Bootstrap Js -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Lord Icon -->
+<script src="{% static 'js/lord-icon-2.1.0.js' %}"></script>
+
+<!-- Feather Icon -->
+<script src="{% static 'js/feather.min.js' %}"></script>
+
+<!-- Slick Slider js -->
+<script src="{% static 'js/slick.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script src="{% static 'js/slick-custom.js' %}"></script>
+
+<!-- Add To Home  js -->
+<script src="{% static 'js/homescreen-popup.js' %}"></script>
+
+<!-- Theme Setting js -->
+<script src="{% static 'js/theme-setting.js' %}"></script>
+<script src="{% static 'js/jquery.mobile-1.4.5.min.js' %}"></script>
+<!-- Script js -->
+<script src="{% static 'js/script.js' %}"></script>
+
+<script>
+    function goBack() {
+      if (document.referrer) {
+          window.history.back();
+      } else {
+          window.location.href = '{% url "home" %}';
+      }
+  }
+
+    // List of URLs that should always redirect to home when going back
+    {% comment %} const homeRedirectUrls = [
+      "/search",
+      "/category/",
+      "/offers",
+      "/account",
+      "/cart",
+    ];
+
+    // Function to update navigation history
+    function updateNavigationHistory() {
+      let history = JSON.parse(
+        sessionStorage.getItem("navigationHistory") || "[]"
+      );
+      let currentPath = window.location.pathname;
+
+      // Don't add duplicate entries
+      if (history.length === 0 || history[history.length - 1] !== currentPath) {
+        history.push(currentPath);
+        // Keep only the last 10 entries
+        if (history.length > 10) {
+          history = history.slice(-10);
+        }
+        sessionStorage.setItem("navigationHistory", JSON.stringify(history));
+      }
+    }
+
+    // Function to handle back navigation
+    function goBack() {
+      let history = JSON.parse(
+        sessionStorage.getItem("navigationHistory") || "[]"
+      );
+      let currentPath = window.location.pathname;
+
+      if (history.length > 1) {
+        // Remove the current page from history
+        history.pop();
+
+        // Check if current page is in homeRedirectUrls
+        if (homeRedirectUrls.some((url) => currentPath.startsWith(url))) {
+          // If current page is in homeRedirectUrls, go to home
+          window.location.href = '{% url "home" %}';
+        } else {
+          // Get the previous page
+          let previousPage = history.pop();
+          // Update the history in session storage
+          sessionStorage.setItem("navigationHistory", JSON.stringify(history));
+          // Navigate to the previous page
+          window.location.href = previousPage;
+        }
+      } else {
+        // If no history or only one page in history, go to home
+        window.location.href = '{% url "home" %}';
+      }
+    }
+
+    // Call updateNavigationHistory when the page loads
+    document.addEventListener("DOMContentLoaded", updateNavigationHistory); {% endcomment %}
+</script>
+
+{% block extra_js %}{% endblock %}

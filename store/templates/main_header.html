@@ -1,0 +1,27 @@
+{% load static %}
+<!-- Header Start -->
+<header class="header">
+  <div class="logo-wrap">
+    <i class="iconly-Category icli nav-bar"></i>
+    <a href="{% url 'home' %}">
+      <img
+        class="logo logo-w"
+        src="{% static 'images/logo/logo-w.png' %}"
+        alt="logo" /></a
+    ><a href="{% url 'home' %}">
+      <img class="logo" src="{% static 'images/logo/logo.png' %}" alt="logo"
+    /></a>
+  </div>
+  <div class="avatar-wrap">
+    <span class="font-sm"
+      ><i class="iconly-Location icli font-xl"></i> Los Angeles</span
+    >
+    <a href="{% url 'account' %}">
+      <img
+        class="avatar"
+        src="{% static 'images/avatar/avatar.jpg' %}"
+        alt="avatar"
+    /></a>
+  </div>
+</header>
+<!-- Header End -->

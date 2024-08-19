@@ -1,0 +1,91 @@
+{% load static %}
+<html lang="en">
+  {% include 'header_links.html' %}
+
+  <body>
+    <div class="bg-pattern-wrap ratio2_1">
+      <div class="bg-patter">
+        <img
+          src="{% static 'images/banner/bg-pattern2.png' %}"
+          class="bg-img"
+          alt="pattern"
+        />
+      </div>
+    </div>
+
+    <main class="main-wrap login-page mb-xxl">
+      <img class="logo" src="{% static 'images/logo/logo.png' %}" alt="logo" />
+      <img
+        class="logo logo-w"
+        src="{% static 'images/logo/logo-w.png' %}"
+        alt="logo"
+      />
+      <p class="font-sm content-color">
+        Online Supermarket for all your daily needs. You are just One Click away
+        from your all needs at your door step.
+      </p>
+
+      <section class="login-section p-0">
+        <form action="{% url 'home' %}" class="custom-form" method="post">
+          {% csrf_token %}
+          <h1 class="font-md title-color fw-600">Login Account</h1>
+
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              class="form-control"
+              name="email"
+            />
+            <i data-feather="at-sign"></i>
+          </div>
+
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              class="form-control"
+              name="password"
+            />
+            <i class="iconly-Hide icli showHidePassword"></i>
+          </div>
+          <a
+            href="{% url 'forgot_password' %}"
+            class="content-color font-sm forgot mb-3"
+            >Forgot Password?</a
+          >
+          <button type="submit" class="btn-solid">Sign in</button>
+          <span class="content-color font-sm d-block text-center fw-600"
+            >If you are new,
+            <a href="{% url 'register' %}" class="underline"
+              >Create Now</a
+            ></span
+          >
+        </form>
+
+        <div class="socila-section">
+          <span>
+            <span class="font-sm fw-600 font-theme">Or login with</span>
+          </span>
+          <div class="social-wrap">
+            <a href="{% url 'home' %}" class="font-md title-color fw-600">
+              <img src="{% static 'icons/png/phone.png' %}" alt="phone" />
+              Continue with Phone
+            </a>
+            <a
+              href="https://accounts.google.com/ServiceLogin"
+              class="font-md title-color fw-600"
+            >
+              <img src="{% static 'icons/png/google.png' %}" alt="google" />
+              Continue with Google
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {% include 'footer_links.html' %}
+  </body>
+</html>

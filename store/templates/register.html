@@ -1,0 +1,183 @@
+{% load static %}
+<html lang="en">
+  {% include 'header_links.html' %}
+
+  <!-- Body Start -->
+  <body>
+    <div class="bg-pattern-wrap ratio2_1">
+      <!-- Background Image -->
+      <div class="bg-patter">
+        <img
+          src="{% static 'images/banner/bg-pattern2.png' %}"
+          class="bg-img"
+          alt="pattern"
+        />
+      </div>
+    </div>
+
+    <!-- Main Start -->
+    <main class="main-wrap login-page mb-xxl">
+      <img class="logo" src="{% static 'images/logo/logo.png' %}" alt="logo" />
+      <img
+        class="logo logo-w"
+        src="{% static 'images/logo/logo-w.png' %}"
+        alt="logo"
+      />
+      <p class="font-sm content-color">
+        Online Supermarket for all your daily needs. you are just One Click away
+        from your all needs at your door step.
+      </p>
+
+      <!-- Login Section Start -->
+      <section class="login-section p-0">
+        <!-- Login Form Start -->
+        <form
+          action="https://themes.pixelstrap.com/fastkart-app/index.html"
+          class="custom-form"
+        >
+          {% csrf_token %}
+          <h1 class="font-md title-color fw-600">Register Account</h1>
+
+          <!-- Email Input start -->
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Full Name"
+              required
+              class="form-control"
+            />
+            <i class="iconly-Profile icli"></i>
+          </div>
+          <!-- Email Input End -->
+
+          <!-- Email Input start -->
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+              class="form-control"
+            />
+            <i data-feather="at-sign"></i>
+          </div>
+          <!-- Email Input End -->
+
+          <!-- Password Input start -->
+          <div class="input-box">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              class="form-control"
+            />
+            <i class="iconly-Hide icli showHidePassword"></i>
+          </div>
+          <!-- Password Input End -->
+
+          <button type="submit" class="btn-solid">Sign Up</button>
+          <span class="content-color font-sm d-block text-center fw-600"
+            >Already have an Account?
+            <a href="{% url 'login' %}" class="underline">Sign In </a></span
+          >
+        </form>
+        <!-- Login Form End -->
+
+        <!-- Social Section Start -->
+        <div class="socila-section">
+          <span>
+            <span class="font-sm fw-600 font-theme"> Or login with </span>
+          </span>
+          <div class="social-wrap">
+            <a href="javascript:void(0)" class="font-md title-color fw-600"
+              ><img src="{% static 'icons/png/phone.png' %}" alt="phone" />
+              Continue with Phone
+            </a>
+            <a
+              href="https://accounts.google.com/ServiceLogin"
+              class="font-md title-color fw-600"
+              ><img src="{% static 'icons/png/google.png' %}" alt="phone" />
+              Continue with Google
+            </a>
+          </div>
+        </div>
+        <!-- Social Section End -->
+      </section>
+      <!-- Login Section End -->
+    </main>
+    <!-- Main End -->
+
+    {% include 'footer_links.html' %} {% comment %}
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+      import {
+        getMessaging,
+        getToken,
+      } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-messaging.js";
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCBhC9rsVEAS5Lk8JyiBp0FouhUZYCXeKw",
+        authDomain: "myfirstproject88955.firebaseapp.com",
+        projectId: "myfirstproject88955",
+        storageBucket: "myfirstproject88955.appspot.com",
+        messagingSenderId: "1031730182137",
+        appId: "1:1031730182137:web:3aebcb05be3b646bbbaf28",
+        measurementId: "G-SCR1M6X62K",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const messaging = getMessaging(app);
+
+      // Request notification permission
+      Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+          console.log("Notification permission granted.");
+          getFCMToken();
+        } else {
+          console.log("Unable to get permission to notify.");
+        }
+      });
+
+      // Function to get the FCM token
+      function getFCMToken() {
+        getToken(messaging, {
+          vapidKey:
+            "BBBBktMrQAgNF_H5yZVcGYcVBU5tthnAD7TCjLI_WgJfhqp8DUHMhB2CZyTwLyBa0sAhIYTGRXdSJG4Kb0JOnqs",
+        })
+          .then((currentToken) => {
+            if (currentToken) {
+              console.log("FCM Token:", currentToken);
+              // You can send this token to your server or use it as needed
+            } else {
+              console.log(
+                "No registration token available. Request permission to generate one."
+              );
+            }
+          })
+          .catch((err) => {
+            console.error("An error occurred while retrieving token:", err);
+          });
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/static/firebase-messaging-sw.js")
+          .then(function (registration) {
+            console.log(
+              "Service Worker registered with scope:",
+              registration.scope
+            );
+          })
+          .catch(function (error) {
+            console.log("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+    {% endcomment %}
+  </body>
+</html>

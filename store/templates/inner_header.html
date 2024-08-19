@@ -1,0 +1,57 @@
+{% load static %}
+<!-- Header Start -->
+<header class="header">
+    <div class="logo-wrap">
+      {% comment %} <a href="javascript:void(0);" onclick="goBack()"
+        ><i class="iconly-Arrow-Left-Square icli"></i
+      ></a>
+      <a href="{% url 'home' %}">
+          <img
+          class="logo logo-w"
+          src="{% static 'images/logo/logo-w.png' %}"
+          alt="logo"
+        /><a href="{% url 'home' %}">
+          <img class="logo" src="{% static 'images/logo/logo.png' %}" alt="logo" /></a> {% endcomment %}
+          <a href="javascript:void(0);" onclick="goBack()"
+          ><i class="iconly-Arrow-Left-Square icli"></i
+        ></a>
+          <h1 class="title-color font-md">{{ page_title|default:"Home" }}</h1>
+    </div>
+    <div class="avatar-wrap">
+        {% if request.resolver_match.url_name == 'product' %}
+        <a
+        href="javascript:void(0)"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#share-grid"
+        ><i data-feather="share-2"></i
+      ></a>
+        {% else %}
+        <a href="{% url 'home' %}">
+          <i class="iconly-Home icli"></i>
+        </a>
+      {% comment %} <a href="offer.html">
+        <lord-icon
+          src="{% static 'icons/gift.json' %}"
+          trigger="loop"
+          stroke="70"
+          colors="primary:#0baf9a,secondary:#0baf9a"
+        ></lord-icon>
+      </a> {% endcomment %}
+      {% endif %}
+    </div>
+  </header>
+  <!-- Header End -->
+
+  
+
+
+    <!-- Header Start -->
+    {% comment %} <header class="header">
+      <div class="logo-wrap">
+        <a href="index-2.html"
+          ><i class="iconly-Arrow-Left-Square icli"></i
+        ></a>
+        <h1 class="title-color font-md">Add Address</h1>
+      </div>
+    </header> {% endcomment %}
+    <!-- Header End -->

@@ -1,0 +1,126 @@
+{% load static %}
+<html lang="en">
+  {% include 'header_links.html' %}
+
+  <!-- Body Start -->
+  <body>
+    <!-- Skeleton loader Start -->
+    <div class="skeleton-loader">
+      <!--Main Start -->
+      <div class="main-wrap address1-page mb-xxl">
+        <!-- Map Start -->
+        <div class="map-section"></div>
+        <!-- Map End -->
+
+        <!-- Location Section Start -->
+        <div class="location-section">
+          <!-- Search Box Start -->
+          <div class="search-box">
+            <input class="form-control" disabled type="search" />
+          </div>
+          <!-- Search Box End -->
+
+          <div class="current-box">
+            <div class="media">
+              <span><i data-feather="send"></i></span>
+              <div class="media-body">
+                <h2 class="font-md title-color">Use current location</h2>
+              </div>
+            </div>
+
+            <div class="location">
+              <div class="location-box">
+                <h3 class="title-color font-sm">
+                  <span class="img d-block"></span>
+                </h3>
+                <p class="content-color font-sm">
+                  8857 Morris Rd. ,Charlottesville, VA 22901
+                </p>
+              </div>
+
+              <div class="location-box">
+                <h3 class="title-color font-sm">
+                  <span class="img d-block"></span>
+                </h3>
+                <p class="content-color font-sm">
+                  8857 Morris Rd. ,Charlottesville, VA 22901
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="address2.html" class="btn-solid"><span></span></a>
+        </div>
+        <!-- Location Section End -->
+      </div>
+      <!--Main End -->
+    </div>
+    <!-- Skeleton loader End -->
+
+    <!-- Header Start -->
+    {% include 'inner_header.html' %}
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main class="main-wrap address1-page">
+      <!-- Map Start -->
+
+      <div class="map-wrap">
+        <div class="top-address">
+          <i data-feather="truck"> </i>
+          <p>Delivery on 7th Aug, Slot: 7am to 9am</p>
+        </div>
+        <div class="map-section" id="map"></div>
+        <span class="navgator"><i data-feather="crosshair"></i></span>
+      </div>
+      <!-- Map End -->
+
+      <!-- Location Section Start -->
+      <section class="location-section">
+        <!-- Search Box Start -->
+        <div class="search-box">
+          <i class="iconly-Search icli search"></i>
+          <input
+            class="form-control"
+            type="search"
+            placeholder="How Can We Help..."
+          />
+          <i class="iconly-Voice icli mic"></i>
+        </div>
+        <!-- Search Box End -->
+
+        <div class="current-box">
+          <div class="media">
+            <span><i data-feather="send"></i></span>
+            <div class="media-body">
+              <h2 class="font-md title-color">Use current location</h2>
+            </div>
+          </div>
+
+          <div class="location">
+            <div class="location-box">
+              <h3 class="title-color font-sm">
+                <i class="iconly-Location icli"></i>Noah Hamilton
+              </h3>
+              <p class="content-color font-sm">
+                8857 Morris Rd. ,Charlottesville, VA 22901
+              </p>
+            </div>
+
+            <div class="location-box">
+              <h3 class="title-color font-sm">
+                <i class="iconly-Location icli"></i>Noah Hamilton
+              </h3>
+              <p class="content-color font-sm">
+                8857 Morris Rd. ,Charlottesville, VA 22901
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="payment.html" class="btn-solid">Confirm location & proceed</a>
+      </section>
+      <!-- Location Section End -->
+    </main>
+    <!-- Main End -->
+    {% include 'footer_links.html' %}
+  </body>
+</html>
