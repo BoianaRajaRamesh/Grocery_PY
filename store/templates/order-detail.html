@@ -1,0 +1,145 @@
+{% load static %}
+<html lang="en">
+{% include 'header_links.html' %}
+
+<!-- Body Start -->
+<body>
+<!-- Header Start -->
+{% include 'inner_header.html' %}
+<!-- Header End -->
+
+<!-- Main Start -->
+<main class="main-wrap order-detail mb-xxl">
+    <!-- Banner Start -->
+    <section class="pt-0">
+        <div class="banner-box">
+            <div class="media">
+                <img src="{% static 'icons/svg/box.svg' %}" alt="box"/>
+                <div class="media-body">
+                    <span class="font-sm">Order ID: #5151515</span>
+                    <h2>Order Delivered</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner End -->
+
+    <!-- Item Section Start -->
+    <section class="item-section p-0">
+        <h3 class="font-theme font-md">Items:</h3>
+
+        <div class="item-wrap">
+            <!-- Item Start -->
+            <a href="{% url 'product' %}" class="media">
+                <div class="count">
+                    <span class="font-sm">2</span>
+                    <i data-feather="x"></i>
+                </div>
+                <div class="media-body">
+                    <h4 class="title-color font-sm">Assorted Capsicum Combo</h4>
+                    <span class="content-color font-sm">500g</span>
+                </div>
+                <span class="title-color font-md">$25.00</span>
+            </a>
+            <!-- Item End -->
+
+            <!-- Item Start -->
+            <a href="{% url 'product' %}" class="media">
+                <div class="count">
+                    <span class="font-sm">2</span>
+                    <i data-feather="x"></i>
+                </div>
+                <div class="media-body">
+                    <h4 class="title-color font-sm">Assorted Capsicum Combo</h4>
+                    <span class="content-color font-sm">500g</span>
+                </div>
+                <span class="title-color font-md">$25.00</span>
+            </a>
+            <!-- Item End -->
+
+            <!-- Item Start -->
+            <a href="{% url 'product' %}" class="media">
+                <div class="count">
+                    <span class="font-sm">2</span>
+                    <i data-feather="x"></i>
+                </div>
+                <div class="media-body">
+                    <h4 class="title-color font-sm">Assorted Capsicum Combo</h4>
+                    <span class="content-color font-sm">500g</span>
+                </div>
+                <span class="title-color font-md">$25.00</span>
+            </a>
+            <!-- Item End -->
+        </div>
+    </section>
+    <!-- Item Section End -->
+
+    <!-- Order Summary Section Start -->
+    <section class="order-summary p-0">
+        <h3 class="font-theme font-md">Payment Details</h3>
+        <!-- Product Summary Start -->
+        <ul>
+            <li>
+                <span>Bag total</span>
+                <span>$220.00</span>
+            </li>
+
+            <li>
+                <span>Bag savings</span>
+                <span class="font-theme">-$20.00</span>
+            </li>
+
+            <li>
+                <span>Coupon Discount</span>
+                <a href="offer.html" class="font-danger">Apply Coupon</a>
+            </li>
+
+            <li>
+                <span>Delivery</span>
+                <span>$50.00</span>
+            </li>
+
+            <li>
+                <span>Total Amount</span>
+                <span>$270.00</span>
+            </li>
+        </ul>
+        <!-- Product Summary End -->
+    </section>
+    <!-- Order Summary Section End -->
+
+    <!-- Address Section Start -->
+    <section class="address-section p-0">
+        <h3 class="font-theme font-md">Address</h3>
+
+        <div class="address">
+            <h4 class="font-sm title-color">Noah Hamilton</h4>
+            <p class="font-sm content-color">8857 Morris Rd. ,Charlottesville, VA 22901</p>
+        </div>
+    </section>
+    <!-- Address Section End -->
+
+    <!-- Payment Method Section Start -->
+    <section class="payment-method p-0">
+        <h3 class="font-theme font-md">Payment Method</h3>
+
+        <div class="payment-box">
+            <img src="{% static 'icons/png/mastercard1.png' %}" alt="card"/>
+            <span class="font-sm title-color"> **** **** **** 6502</span>
+        </div>
+    </section>
+    <!-- Payment Method Section End -->
+</main>
+<!-- Main End -->
+
+<!-- Footer Start -->
+<footer class="footer-wrap footer-button">
+    <a href="{% url 'category_products' %}" class="font-md">Reorder</a>
+</footer>
+<!-- Footer End -->
+
+
+<!-- Action Confirmation End -->
+{% include 'footer_links.html' %}
+</body>
+</html>

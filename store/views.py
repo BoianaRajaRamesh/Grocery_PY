@@ -105,3 +105,9 @@ def notification_view(request):
         'page_title': 'Notification'
     }
    return render(request, 'notification.html', context)
+
+def order_details_view(request):
+   context = {
+        'page_title': 'Order Summary'
+    }
+   return render(request, 'order-detail.html', context)

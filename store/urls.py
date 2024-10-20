@@ -19,4 +19,5 @@ urlpatterns = [
     path('payment', views.payment_view, name='payment'),
     path('orders', views.orders_view, name='orders'),
     path('notification', views.notification_view, name='notification'),
+    path('order_details', views.order_details_view, name='order_details'),
 ]

@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'store',
     'channels',
     'rest_framework',
-    'redis_app'
 ]
 
 MIDDLEWARE = [
@@ -126,7 +125,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_ecommerece',
+        'NAME': 'django_grocery',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
@@ -144,3 +143,4 @@ CHANNEL_LAYERS = {
         'BACKEND': 'channels.layers.InMemoryChannelLayer'
     }
 }
+AUTH_USER_MODEL = 'store.User'
