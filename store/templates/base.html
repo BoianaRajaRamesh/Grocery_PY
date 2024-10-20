@@ -210,11 +210,11 @@
       <div class="wrap">
         <div class="user-panel">
           <div class="media">
-            <a href="account.html">
+            <a href="{% url 'account' %}">
               <img src="{% static 'images/avatar/avatar.jpg' %}" alt="avatar"
             /></a>
             <div class="media-body">
-              <a href="account.html" class="title-color font-sm"
+              <a href="{% url 'account' %}" class="title-color font-sm"
                 >Andrea Joanne
                 <span class="content-color font-xs"
                   >andreajoanne@gmail.com</span
@@ -237,15 +237,7 @@
               ></a>
             </li>
 
-            <li>
-              <a href="pages-list.html" class="nav-link title-color font-sm">
-                <i class="iconly-Paper icli"></i>
-                <span>Fastkart Pages list</span>
-              </a>
-              <a class="arrow" href="pages-list.html"
-                ><i data-feather="chevron-right"></i
-              ></a>
-            </li>
+
 
             <li>
               <a href="category-wide.html" class="nav-link title-color font-sm">

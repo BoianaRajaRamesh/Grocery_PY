@@ -17,7 +17,7 @@
               <img src="{% static 'images/avatar/avatar.jpg' %}" alt="avatar"
             /></a>
             <div class="media-body">
-              <a href="account.html" class="title-color"
+              <a href="{% url 'account' %}" class="title-color"
                 >Andrea Joanne
                 <span class="content-color font-sm"
                   >andreajoanne@gmail.com</span
@@ -40,21 +40,21 @@
           </li>
 
           <li>
-            <a href="category-wide.html" class="nav-link title-color font-sm">
+            <a href="{% url 'category' %}" class="nav-link title-color font-sm">
               <i class="iconly-Category icli"></i>
               <span>Shop by Category</span>
             </a>
-            <a href="category-wide.html" class="arrow"
+            <a href="{% url 'category' %}" class="arrow"
               ><i data-feather="chevron-right"></i
             ></a>
           </li>
 
           <li>
-            <a href="order-history.html" class="nav-link title-color font-sm">
+            <a href="{% url 'orders' %}" class="nav-link title-color font-sm">
               <i class="iconly-Document icli"></i>
               <span>Orders</span>
             </a>
-            <a href="order-history.html" class="arrow"
+            <a href="{% url 'orders' %}" class="arrow"
               ><i data-feather="chevron-right"></i
             ></a>
           </li>
@@ -86,11 +86,11 @@
           </li>
 
           <li>
-            <a href="notification.html" class="nav-link title-color font-sm">
+            <a href="{% url 'notification' %}" class="nav-link title-color font-sm">
               <i class="iconly-Notification icli"></i>
               <span>Notification</span>
             </a>
-            <a href="notification.html" class="arrow"
+            <a href="{% url 'notification' %}" class="arrow"
               ><i data-feather="chevron-right"></i
             ></a>
           </li>
@@ -117,17 +117,17 @@
             </div>
           </li>
 
-          <li>
-            <a href="javascript:void(0)" class="nav-link title-color font-sm">
-              <i class="iconly-Filter icli"></i>
-              <span>RTL</span>
-            </a>
+<!--          <li>-->
+<!--            <a href="javascript:void(0)" class="nav-link title-color font-sm">-->
+<!--              <i class="iconly-Filter icli"></i>-->
+<!--              <span>RTL</span>-->
+<!--            </a>-->
 
-            <div class="dark-switch">
-              <input id="rtlButton" type="checkbox" />
-              <span class="before-none"></span>
-            </div>
-          </li>
+<!--            <div class="dark-switch">-->
+<!--              <input id="rtlButton" type="checkbox" />-->
+<!--              <span class="before-none"></span>-->
+<!--            </div>-->
+<!--          </li>-->
         </ul>
         <!-- Navigation End -->
         <button
@@ -170,7 +170,7 @@
               Cancel
             </button>
             <a
-              href="onboarding2.html"
+              href="{% url 'home' %}"
               class="btn-solid d-block"
               data-bs-dismiss="offcanvas"
               aria-label="Close"

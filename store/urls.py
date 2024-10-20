@@ -16,4 +16,7 @@ urlpatterns = [
     path('address', views.address_view, name='address'),
     path('settings', views.setting_view, name='setting'),
     path('wishlist', views.wishlist, name='wishlist'),
+    path('payment', views.payment_view, name='payment'),
+    path('orders', views.orders_view, name='orders'),
+    path('notification', views.notification_view, name='notification'),
 ]

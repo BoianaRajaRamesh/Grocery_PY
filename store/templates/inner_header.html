@@ -29,7 +29,7 @@
         <a href="{% url 'home' %}">
           <i class="iconly-Home icli"></i>
         </a>
-      {% comment %} <a href="offer.html">
+      {% comment %} <a href="{% url 'offer' %}">
         <lord-icon
           src="{% static 'icons/gift.json' %}"
           trigger="loop"
@@ -48,7 +48,7 @@
     <!-- Header Start -->
     {% comment %} <header class="header">
       <div class="logo-wrap">
-        <a href="index-2.html"
+        <a href="{% url 'address' %}"
           ><i class="iconly-Arrow-Left-Square icli"></i
         ></a>
         <h1 class="title-color font-md">Add Address</h1>

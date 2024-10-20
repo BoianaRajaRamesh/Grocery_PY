@@ -1,0 +1,412 @@
+{% load static %}
+<html lang="en">
+  {% include 'header_links.html' %}
+
+  <!-- Body Start -->
+  <body>
+    <!-- Header Start -->
+    {% include 'inner_header.html' %}
+    <!-- Header End -->
+
+    <!-- Main Start -->
+    <main class="main-wrap notification-page mb-xxl">
+      <div class="nav-wrap">
+        <!-- Notification Tabs  Start -->
+        <ul class="nav nav-tab2 nav-pills" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="alert1-tab" data-bs-toggle="pill" data-bs-target="#alert1" type="button" role="tab" aria-controls="alert1" aria-selected="true">Alerts</button>
+          </li>
+
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="offer1-tab" data-bs-toggle="pill" data-bs-target="#offer1" type="button" role="tab" aria-controls="offer1" aria-selected="true">Offers</button>
+          </li>
+        </ul>
+        <!-- Notification Tabs  End -->
+        <button class="font-md font-theme"><img src="assets/icons/svg/d-check.svg" alt="check" /> Mark all as read</button>
+      </div>
+
+      <!-- Tab Content Start -->
+      <section class="tab-content ratio2_1" id="pills-tabContent">
+        <!-- Alert Content Start -->
+        <div class="tab-pane fade show" id="alert1" role="tabpanel" aria-labelledby="alert1-tab">
+          <!-- Yesterday Start -->
+          <div class="offer-wrap">
+            <h2 class="font-sm content-color">Yesterday</h2>
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-blue">
+                  <i class="iconly-Discount icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">UPTO 40% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-yellow-light">
+                  <i class="iconly-Ticket icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">FLAT 30% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">5.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+          </div>
+          <!-- Yesterday End -->
+
+          <!-- Last 7 Days Start -->
+          <div class="offer-wrap section-p-t">
+            <h2 class="font-sm content-color">Last 7 Days</h2>
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-orange-light">
+                  <i class="iconly-Password icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">Password Successfully Changed</h3>
+                  <span class="font-xs content-color">8.00am, 15 Jan, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Signin</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-purple">
+                  <i class="iconly-Ticket-Star icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">$200 top up successfully</h3>
+                  <span class="font-xs content-color">9.00am, 10 Jan, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Topup</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-blue">
+                  <i class="iconly-Discount icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">UPTO 40% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-yellow-light">
+                  <i class="iconly-Ticket icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">FLAT 30% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">5.00pm, 05 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-orange-light">
+                  <i class="iconly-Password icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">Password Successfully Changed</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Signin</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-purple">
+                  <i class="iconly-Ticket-Star icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">$200 top up successfully</h3>
+                  <span class="font-xs content-color">9.00am, 10 Jan, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Topup</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-blue">
+                  <i class="iconly-Discount icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">UPTO 40% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+          </div>
+          <!-- Last 7 Days End -->
+        </div>
+        <!-- Alert Content End -->
+
+        <!-- Offer Content Start -->
+        <div class="tab-pane fade show active" id="offer1" role="tabpanel" aria-labelledby="offer1-tab">
+          <!-- Yesterday Start -->
+          <div class="offer-wrap">
+            <h2 class="font-sm content-color">Yesterday</h2>
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-blue">
+                  <i class="iconly-Discount icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">UPTO 40% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-yellow-light">
+                  <i class="iconly-Ticket icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">FLAT 30% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">5.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+          </div>
+          <!-- Yesterday End -->
+
+          <!-- Last 7 Days Start -->
+          <div class="offer-wrap section-p-t">
+            <h2 class="font-sm content-color">Last 7 Days</h2>
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-orange-light">
+                  <i class="iconly-Password icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">Password Successfully Changed</h3>
+                  <span class="font-xs content-color">8.00am, 15 Jan, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Signin</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-purple">
+                  <i class="iconly-Ticket-Star icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">$200 top up successfully</h3>
+                  <span class="font-xs content-color">9.00am, 10 Jan, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Topup</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-blue">
+                  <i class="iconly-Discount icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">UPTO 40% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-yellow-light">
+                  <i class="iconly-Ticket icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">FLAT 30% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">5.00pm, 05 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-orange-light">
+                  <i class="iconly-Password icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">Password Successfully Changed</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Signin</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-purple">
+                  <i class="iconly-Ticket-Star icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">$200 top up successfully</h3>
+                  <span class="font-xs content-color">9.00am, 10 Jan, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">Topup</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+
+            <!-- Offer Box Start -->
+            <div class="offer-box">
+              <div class="media">
+                <div class="icon-wrap bg-theme-blue">
+                  <i class="iconly-Discount icli"></i>
+                </div>
+                <div class="media-body">
+                  <h3 class="font-sm title-color">UPTO 40% OFF, Sales Ends</h3>
+                  <span class="font-xs content-color">3.00pm, 10 July, 2021</span>
+                </div>
+                <span class="badges bg-theme-theme-light font-theme">offer</span>
+              </div>
+            </div>
+            <!-- Offer Box End -->
+          </div>
+          <!-- Last 7 Days End -->
+        </div>
+        <!-- Offer Content End -->
+      </section>
+      <!-- Tab Content End -->
+    </main>
+    <!-- Main End -->
+
+    <!-- Filter Offcanvas Start -->
+    <div class="shop-fillter order-history-filter offcanvas offcanvas-bottom" tabindex="-1" id="filter" aria-labelledby="filter">
+      <div class="offcanvas-header">
+        <h5 class="title-color font-md">Filter</h5>
+      </div>
+      <div class="offcanvas-body small">
+        <div class="pack-size mt-0">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">All order</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">Open Order</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">Return Orders</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">Cancelled Order</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pack-size">
+          <h5 class="title-color font-md">Time Filter</h5>
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">Last 30days</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">Last 6 Month</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">2021</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="size">
+                <span class="font-sm">2020</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas-footer">
+        <div class="btn-box">
+          <button class="btn-outline font-md" data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+          <button class="btn-solid font-md" data-bs-dismiss="offcanvas" aria-label="Close">Apply</button>
+        </div>
+      </div>
+    </div>
+    <!-- Filter Offcanvas End -->
+
+    <!-- Footer Start -->
+    {% include 'footer.html' %}
+    <!-- Footer End -->
+
+
+    <!-- Action Confirmation End -->
+    {% include 'footer_links.html' %}
+  </body>
+</html>

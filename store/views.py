@@ -87,3 +87,21 @@ def wishlist(request):
     }
    return render(request, 'wishlist.html', context)
 
+def payment_view(request):
+   context = {
+        'page_title': 'Add Payment Method'
+    }
+   return render(request, 'payment.html', context)
+
+def orders_view(request):
+   context = {
+        'page_title': 'Order History'
+    }
+   return render(request, 'orders.html', context)
+
+
+def notification_view(request):
+   context = {
+        'page_title': 'Notification'
+    }
+   return render(request, 'notification.html', context)
