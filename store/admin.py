@@ -28,11 +28,13 @@ class CategoriesAdmin(admin.ModelAdmin):
 
 @admin.register(Products)
 class ProductsAdmin(admin.ModelAdmin):
-    list_display = ('productName', 'categoryId', 'stock', 'price', 'minSaleQty', 'status', 'createdDate', 'updatedDate')
+    list_display = ('productName', 'get_categoryId', 'stock', 'price', 'minSaleQty', 'status', 'createdDate', 'updatedDate')
     search_fields = ('productName', 'sku')
     list_filter = ('status', 'categoryId')
     ordering = ('-createdDate',)
 
+    def get_categoryId(self, obj):
+        return ", ".join([category.category for category in obj.Categories.all()])
 
 @admin.register(OrderStatus)
 class OrderStatusAdmin(admin.ModelAdmin):

@@ -1,9 +1,11 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from .models import  *
 
 def home(request):
+    categories = Categories.objects.filter(status=1).order_by('?').all()[:8]
     context = {
-        'page_title': 'Home'
+        'page_title': 'Home',
+        'categories': categories
     }
     return render(request, 'home.html', context)
 
@@ -31,9 +33,15 @@ def product_view(request):
     }
     return render(request, 'product.html', context)
 
-def category_view(request):
+def category_view(request, category_id=""):
+    categories = Categories.objects.filter(status=1)
+    if category_id != "":
+        categories = categories.filter(parentId=category_id).all()
+    else:
+        categories = categories.filter(parentId=1).all()
     context = {
-        'page_title': 'Categories'
+        'page_title': 'Categories',
+        'categories': categories
     }
     return render(request, 'category.html', context)
 

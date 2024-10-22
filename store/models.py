@@ -65,16 +65,16 @@ class Categories(models.Model):
 
 class Products(models.Model):
     id = models.AutoField(primary_key=True, db_index=True, db_column='id')
+    parentId = models.ForeignKey('self', db_column='parent_id', db_index=True, null=True, on_delete=models.SET_NULL)
     sku = models.CharField(db_column='sku', max_length=255, null=True, blank=True)
     productName = models.CharField(db_column='product_name', db_index=True, max_length=255, null=True, blank=True)
-    categoryId = models.ForeignKey(Categories, db_column='category_ids', db_index=True, null=True,
-                                   on_delete=models.SET_NULL, blank=True)
+    categoryId = models.ManyToManyField(Categories, db_column='category_ids', db_index=True, blank=True)
     description = models.TextField(db_column='description', null=True, blank=True)
-    mediaPaths = models.CharField(db_column='media_paths', max_length=255, null=True, blank=True)
+    images = models.JSONField(db_column='images', max_length=255, null=True, blank=True)
     stock = models.IntegerField(db_column='stock', null=True, blank=True)
     price = models.CharField(db_column='price', max_length=25, null=True, blank=True)
     minSaleQty = models.IntegerField(db_column='min_sal_qty', null=True, blank=True, default=1)
-    attributes = models.TextField(db_column='attributes', db_index=True, null=True, blank=True)
+    attributes = models.JSONField(db_column='attributes', null=True, blank=True)
     status = models.SmallIntegerField(db_column='status', choices=STATUS_BOOLEN, default=1)
     createdDate = models.DateTimeField(db_column='created_date', default=timezone.now)
     updatedDate = models.DateTimeField(db_column='updated_date', default=timezone.now)

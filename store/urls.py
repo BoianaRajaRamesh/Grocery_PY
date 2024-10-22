@@ -8,6 +8,7 @@ urlpatterns = [
     path('forgot_password', views.forgot_password, name='forgot_password'),
     path('product', views.product_view, name='product'),
     path('category', views.category_view, name='category'),
+    path('category/<int:category_id>', views.category_view, name='category_with_id'),
     path('category_product', views.category_products, name='category_products'),
     path('offer', views.offer, name='offer'),
     path('search', views.search_view, name='search'),

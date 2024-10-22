@@ -237,8 +237,6 @@
               ></a>
             </li>
 
-
-
             <li>
               <a href="category-wide.html" class="nav-link title-color font-sm">
                 <i class="iconly-Category icli"></i>
@@ -475,117 +473,22 @@
           <span>Shop By Category </span><span class="line"></span>
         </h3>
         <div class="row gy-sm-4 gy-2">
+        {% for category in categories %}
           <div class="col-3">
             <div class="category-wrap">
               <div class="bg-shape bg-theme-blue border-blue"></div>
               <a href="{% url 'category' %}">
                 <img
                   class="category img-fluid"
-                  src="{% static 'images/catagoeris/1.png' %}"
+                  src="{% static category.mediaPaths %}"
                   alt="category"
                 />
               </a>
-              <span class="title-color">Oils,Refined &amp; Ghee</span>
+              <span class="title-color">{{ category.category }}</span>
             </div>
           </div>
+          {% endfor %}
 
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-yellow border-yellow"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/2.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Rice, Flour &amp; Grains</span>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-orange border-orange"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/3.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Food Cupboard </span>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-pink border-pink"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/4.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Fresh Fruits &amp; Veggies </span>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-purple border-purple"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/5.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Drinks&amp; Beverages</span>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-blue border-blue"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/6.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Instant Mixes </span>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-yellow border-yellow"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/7.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Ready to Eat Food</span>
-            </div>
-          </div>
-
-          <div class="col-3">
-            <div class="category-wrap">
-              <div class="bg-shape bg-theme-orange border-orange"></div>
-              <a href="{% url 'category' %}">
-                <img
-                  class="category img-fluid"
-                  src="{% static 'images/catagoeris/8.png' %}"
-                  alt="category"
-                />
-              </a>
-              <span class="title-color">Dales &amp; Pulses </span>
-            </div>
-          </div>
         </div>
       </section>
       <!-- Shop By Category End -->
