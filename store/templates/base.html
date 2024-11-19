@@ -477,7 +477,7 @@
           <div class="col-3">
             <div class="category-wrap">
               <div class="bg-shape bg-theme-blue border-blue"></div>
-              <a href="{% url 'category' %}">
+              <a href="{% url 'category_with_id' category.id %}">
                 <img
                   class="category img-fluid"
                   src="{% static category.mediaPaths %}"
@@ -1473,3 +1473,4 @@
     {% include "footer_links.html" %}
   </body>
 </html>
+

@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from .models import  *
+from django.http import JsonResponse
+from django.template.loader import render_to_string
 
 def home(request):
-    categories = Categories.objects.filter(status=1).order_by('?').all()[:8]
+    categories = Categories.objects.filter(status=1, parentId__isnull=True).order_by('?').all()[:8]
     context = {
         'page_title': 'Home',
         'categories': categories
@@ -34,22 +36,48 @@ def product_view(request):
     return render(request, 'product.html', context)
 
 def category_view(request, category_id=""):
+    parent_categories = Categories.objects.filter(status=1, parentId__isnull=True)
     categories = Categories.objects.filter(status=1)
     if category_id != "":
         categories = categories.filter(parentId=category_id).all()
     else:
+        category_id = 1
         categories = categories.filter(parentId=1).all()
     context = {
         'page_title': 'Categories',
-        'categories': categories
+        'categories': parent_categories,
+        'sub_categories': categories,
+        'category_id': category_id
     }
     return render(request, 'category.html', context)
 
-def category_products(request):
+def category_products(request, category_id = ""):
+    if category_id == "":
+        category_id = 1
+    category = Categories.objects.filter(status=1, id=category_id).get()
+    all_sub_categories = Categories.objects.filter(status=1, parentId=category.parentId).all()
     context = {
-        'page_title': 'Categories'
+        'page_title': 'Categories',
+        'category': category,
+        'sub_categories': all_sub_categories
     }
     return render(request, 'category_products.html', context)
+
+def category_content(request, category_id):
+    # parent_categories = Categories.objects.filter(status=1, parentId__isnull=True)
+    categories = Categories.objects.filter(status=1)
+    if category_id != "":
+        categories = categories.filter(parentId=category_id).all()
+    else:
+        category_id = 1
+        categories = categories.filter(parentId=1).all()
+
+    # Render the subcategories as HTML
+    sub_categories_html = render_to_string('partials/_sub_categories.html', {'sub_categories': categories})
+
+    return JsonResponse({
+        'sub_categories_html': sub_categories_html
+    })
 
 def search_view(request):
     context = {

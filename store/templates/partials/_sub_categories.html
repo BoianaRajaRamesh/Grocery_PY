@@ -1,0 +1,17 @@
+{% load static %}
+{% for sub_category in sub_categories %}
+<div class="col-4">
+    <a href="{% url 'category_products' %}">
+        <div class="staples-box">
+            <div>
+                <img
+                    class="img-fluid"
+                    src="{% static sub_category.mediaPaths %}"
+                    alt="{{ sub_category.category }}"
+                />
+            </div>
+            <h4>{{ sub_category.category }}</h4>
+        </div>
+    </a>
+</div>
+{% endfor %}

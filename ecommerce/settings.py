@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-tau@^8kftx81)+05&%8730^&7@j-%q-a7bkz71%&8(*tis489t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.105', '127.0.0.1']
+ALLOWED_HOSTS = ['192.168.0.105', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -127,7 +127,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_grocery',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
